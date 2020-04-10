@@ -1,31 +1,30 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyCd0z-5eh279APTqSHU7t-LJhdndI_ZN-o",
-    authDomain: "fir-webapp-dfdb2.firebaseapp.com",
-    databaseURL: "https://fir-webapp-dfdb2.firebaseio.com",
-    projectId: "fir-webapp-dfdb2",
-    storageBucket: "fir-webapp-dfdb2.appspot.com",
-    messagingSenderId: "72384337559",
-    appId: "1:72384337559:web:3ebbd3d56ff937df57fbd2",
-    measurementId: "G-PX918SC5TP"
+    apiKey: "AIzaSyAz-0oP7rRFgoKjftdLeo7llctC0yiw19M",
+    authDomain: "yogdaan-20e0a.firebaseapp.com",
+    databaseURL: "https://yogdaan-20e0a.firebaseio.com",
+    projectId: "yogdaan-20e0a",
+    storageBucket: "yogdaan-20e0a.appspot.com",
+    messagingSenderId: "989336896163",
+    appId: "1:989336896163:web:be3893270f567e06f0f516",
+    measurementId: "G-Y8BYPX3MHC"
   };
-
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-
   firebase.auth.Auth.Persistence.LOCAL
-
   $("#btn-login").click(function()
   {
       var email = $("#email").val();
       var password = $("#password").val();
-
-      if(email != "" && passord != "")
+      console.log(email,password,"----");
+      if(email != "" && password != "")
     {
-        var result = firebase.auth().signInWithEmailAndPassword(email, password);
-
-        result.catch(functiom(error)
+        console.log("inside");
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+            console.log('hit finally');
+            window.location.href = "MainPage.html";
+        }).catch(function(error)
         {
+            console.log('hit hahah');
             var errorCode = error.code;
             var errorMessage = error.message;
 
@@ -33,46 +32,7 @@ var firebaseConfig = {
             console.log(errorMessage);
             window.alert("Message : " + errorMessage);
         });
-    }
-    else
-    {
-        window.alert("Form is incomplete . Please fill out all fields.");
-    }
-  });
-
-
-  $("#btn-signup").click(function()
-  {
-      var Work = $("#Field of Work").val();
-      var Username = $("#Username").val();
-      var passord = $("#password").val();
-      var cPassword = $("#confirmPassword").val();
-      var name = $("#Name").val();
-      var phone number  = $("#Phone number").val();
-      var City  = $("#City").val();
-      var State  = $("#State").val();
-
-
-      if(Work != "" && Username != "" && password !="" && cPassword !="" && name !="" && phone number !="" && City !="" && State !="")
-    {
-        if (password==cPassword)
-        {
-            var result = firebase.auth().createUserWithUsernamePasswordAndPhonenumber(Username, password,phone number);
-
-        result.catch(functiom(error)
-        {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-
-            console.log(errorCode);
-            console.log(errorMessage);
-            window.alert("Message : " + errorMessage);
-        });
-        }
-        else
-        {
-            window.alert("Password do not match with the Confirm Password"); 
-        }
+            console.log("present");
     }
     else
     {
@@ -83,15 +43,14 @@ var firebaseConfig = {
   $("#btn-resetPassword").click(function()
   {
       var auth = firebase.auth();
-      var Username = $("#Username").val();
+      var email = $("#email").val();
       
-      if(Username !="")
+      if(email !="")
       {
-          auth.sendPasswordResetUsername(Username).then(function()
+          auth.sendPasswordResetEmail(email).then(function()
           {
-             window.alert("Username has been sent to you,Please check and verify.");
-          });
-        .catch(function(error)
+             window.alert("Email has been sent to you,Please check and verify.");
+          }).catch(function(error)
         {
            var errorCode = error.code;
            var errorMessage = error.message;
