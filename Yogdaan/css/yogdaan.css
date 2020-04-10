@@ -1,0 +1,102 @@
+.navbar{
+    background: rgb(61, 179, 61);
+    padding: 20px 20px;
+    transition: all 1s ease;
+}
+.navbar-brand{
+    font-size: 30px;
+    transition: all 1s ease;
+    color: whitesmoke;
+}
+.navbar-brand:hover{
+    color: lightcyan;
+}
+.text-muted{
+    font-size: 20px;
+}
+.navbar-toggler{
+    background-color: honeydew;
+
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: green;
+    transition: all 0.5s ease;
+}
+.nav-link{
+    color: honeydew;
+    text-decoration: none;
+    transition: all 2s ease;
+    font-size: 23px;
+}
+.nav-link:hover{
+    color: lightgoldenrodyellow;
+}
+#red{
+    background-color: red;
+    width: 1cm;
+    height: 1cm;
+    margin: 0.4rem;
+    transition: all ease-in-out;
+}
+#blue{
+    background-color: blue;
+    width: 1cm;
+    height: 1cm;
+    margin: 0.4rem;
+    
+}
+#green{
+    background-color: green;
+    width: 1cm;
+    height: 1cm;
+    margin: 0.4rem;
+}
+.row1{
+    width: 15%;
+}
+.row2{
+    width: 14%;
+}
+.row3{
+    width: 8%;
+}
+.row4{
+    width: 47%;
+}
+.row5{
+    width: 15%;
+}
+#red{
+    border-radius: 50%;
+}
+#blue{
+    border-radius: 50%;
+}
+#green{
+    border-radius: 50%;
+}
+body{
+    background-color: rgb(220, 245, 153);
+}
+table{
+    
+    margin: auto;
+    border-style: outset;
+    border-color: lightblue;
+    border-width: 7px;
+
+}
+td{
+    background: rgb(243, 240, 241);
+}
+th{
+    color: gray;
+    background: honeydew;
+}
+tr:hover{
+    color: green;
+}
+

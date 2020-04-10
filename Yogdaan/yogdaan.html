@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Yogdaan</title>
+	    <!-- bootstrap css-->
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <!--main css-->
+	    <link rel="stylesheet" href="css/yogdaan.css">
+	
+    </head>
+    <body>
+        <!--navbar-->
+
+	    <nav class="navbar navbar-expand-lg">
+			<div>
+				<a href="" class="navbar-brand text-uppercase primary-color">yogdaan</a>
+				<h4 class="text-muted"><strong>People Need You</strong></h4>
+			</div>
+			
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+			    <div class="toggler-btn">
+				    <div class="bar bar1"></div>
+				    <div class="bar bar2"></div>
+				    <div class="bar bar3"></div>
+			    </div>
+		    </button>
+		    <!--links-->
+		        <div class="collapse navbar-collapse" id="myNavbar">
+			    <ul class="navbar-nav mx-auto">
+				    <li class="nav-item">
+					    <a href="#Ngo-name" class="nav-link text-capitalize">Ngo-name</a>
+				    </li>
+			    </ul>
+		    </div>
+	    </nav>
+
+
+	<!--end of navbar-->
+
+		<section class="py-5" id="special-item">
+			<div class="container-fluid d-flex ju mx-auto p-3">
+				State: <input type="text" name="state" id="state" class="p-1 mx-auto"/>
+				City: <input type="text" name="city" id="city" class="p-1 mx-auto"/>
+				Day: <input type="text" name="day" id="day" class="p-1 mx-auto"/>
+				Request: <input type="text" name="request" id="request" class="p-1 mx-auto"/>
+				<button onclick="addRow()">Add Row</button>
+			</div>
+			
+			<table border="2" class="table">
+				<thead>
+					<tr>
+						<th class="row1">State</th>
+						<th class="row2">City</th>
+						<th class="row3">Day</th>
+						<th class="row4">Request</th>
+						<th class="row5">Button</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><h4>Yours</h4></td>
+						<td><h4>Yours</h4></td>
+						<td><h4>1</h4></td>
+						<td><h4>User Wants Help</h4></td>
+						<td class="d-flex justify-center-between high">
+							<input type="button" id="red" class="red" onclick="press()">
+							<input type="button" id="blue" class="form-control form-control-lg">
+							<input type="button" id="green" class="form-control form-control-lg">
+						</td>
+					</tr>
+					<tr>
+						<td><h4>Yours</h4></td>
+						<td><h4>Another</h4></td>
+						<td><h4>3</h4></td>
+						<td><h4>User Wants Help</h4></td>
+						<td class="d-flex justify-center-between">
+							<input type="button" id="red" class="red" onclick="press()">
+							<input type="button" id="blue" class="form-control form-control-lg">
+							<input type="button" id="green" class="form-control form-control-lg">
+						</td>
+					</tr>
+					<tr>
+						<td><h4>Another</h4></td>
+						<td><h4>Another</h4></td>
+						<td><h4>5</h4></td>
+						<td><h4>User Wants Help</h4></td>
+						<td class="d-flex justify-center-between">
+							<input type="button" id="red" class="red" onclick="press()">
+							<input type="button" id="blue" class="form-control form-control-lg">
+							<input type="button" id="green" class="form-control form-control-lg">
+						</td>
+					</tr>
+				</tbody>
+    		</table>
+
+		</section>
+
+
+        <script src="js/jquery-3.4.1.js"></script>
+	    <!-- bootsrap js-->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- Script file-->
+		<script src="js/yogdaan.js"></script>
+    </body>
+</html>
