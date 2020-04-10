@@ -21,7 +21,7 @@ var firebaseConfig = {
         console.log("inside");
         firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
             console.log('hit finally');
-            window.location.href = "MainPage.html";
+            window.location.href = "Yogdaan/yogdaan.html";
         }).catch(function(error)
         {
             console.log('hit hahah');
