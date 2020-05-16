@@ -8,15 +8,17 @@
 	    <link rel="stylesheet" href="css/bootstrap.min.css">
 	    <!--main css-->
 		<link rel="stylesheet" href="css/yogdaan.css">
+		<!--Sementic UI Css-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 		<!--Script Firebase-->
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
 	
     </head>
     <body>
         <!--navbar-->
 
-	    <nav class="navbar navbar-expand-lg">
+	    <nav class="navbar navbar-expand-lg ui olive inverted menu">
 			<div>
 				<a href="" class="navbar-brand text-uppercase primary-color">yogdaan</a>
 				<h4 class="text-muted"><strong>People Need You</strong></h4>
@@ -38,22 +40,13 @@
 			    </ul>
 		    </div>
 	    </nav>
-
+		
 
 	<!--end of navbar-->
 
 		<section class="py-5" id="special-item">
-			<div class="container-fluid d-flex ju mx-auto p-3">
-				<form id="add-query">
-					State: <input type="text" name="State"  placeholder="State">
-					City: <input type="text" name="City"  placeholder="City">
-					Day: <input type="text" name="Day"  placeholder="Day">
-					Request: <input type="text" name="Request"  placeholder="Request">
-					<button>Add Query</button>
-				</form>
-			</div>
 			
-			<table border="2" class="table">
+			<table border="2" class="table ui teal inverted table">
 				<thead>
 					<tr>
 						<th class="row1">State</th>
@@ -68,12 +61,38 @@
 
 					</tr>
 				</tbody>
-    		</table>
+			</table>
 
 		</section>
 
+		<section>
+			<div class="ui teal segment text container my-5">
+				<div class="ui huge header">New Request</div>
+				<form class="ui form " id="add-query">
+					<div class="field">
+						<label>State</label>
+						<input type="text" name="State" placeholder="State">
+					</div>
+					<div class="field">
+						<label>City</label>
+						<input type="text" name="City" placeholder="City">
+					</div>
+					<div class="field">
+						<label>Day</label>
+						<input type="number" name="Day" placeholder="Day">
+					</div>
+					<div class="field">
+						<label>Request</label>
+						<textarea name="Request" placeholder="Request"></textarea>
+					</div>
+					<i class="hand point right outline icon"></i>
+					<input type="submit" class="ui violet big basic button">
+				</form>
+			</div>
+		</section>
 
-        <script src="js/jquery-3.4.1.js"></script>
+		
+		<script src="js/jquery-3.4.1.js"></script>
 	    <!-- bootsrap js-->
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<!-- Script file-->
@@ -81,23 +100,24 @@
 		<!-- TODO: Add SDKs for Firebase products that you want to use
     	 https://firebase.google.com/docs/web/setup#available-libraries -->
 
-	 	<script>
-		// Your web app's Firebase configuration
-		var firebaseConfig = {
-        apiKey: "AIzaSyAz-0oP7rRFgoKjftdLeo7llctC0yiw19M",
-   		authDomain: "yogdaan-20e0a.firebaseapp.com",
-    	databaseURL: "https://yogdaan-20e0a.firebaseio.com",
-    	projectId: "yogdaan-20e0a",
-    	storageBucket: "yogdaan-20e0a.appspot.com",
-    	messagingSenderId: "989336896163",
-    	appId: "1:989336896163:web:be3893270f567e06f0f516",
-    	measurementId: "G-Y8BYPX3MHC"
-  		};
-	   // Initialize Firebase
-		   firebase.initializeApp(firebaseConfig);
-		   const db = firebase.firestore();
-		   db.settings({ timestampsInSnapshots: true});
-	   </script>
+		 <script>
+			// Your web app's Firebase configuration
+			// Your web app's Firebase configuration
+  			var firebaseConfig = {
+    		apiKey: "AIzaSyBYBjuyi4QRtxsr7kIG2GcdAPcusfkS2bw",
+    		authDomain: "yogdaan-63e49.firebaseapp.com",
+    		databaseURL: "https://yogdaan-63e49.firebaseio.com",
+    		projectId: "yogdaan-63e49",
+    		storageBucket: "yogdaan-63e49.appspot.com",
+    		messagingSenderId: "1053095630027",
+    		appId: "1:1053095630027:web:e1f38a1e40a3ef56b5f74e",
+    		measurementId: "G-LQK2Z9C6BN"
+  			};
+  		// Initialize Firebase
+  			firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+		  </script>
 
 	   
 		<script src="js/yogdaan.js"></script>

@@ -39,23 +39,23 @@ function renderCafe(doc){
     cross.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('Users').doc(id).delete();
+        db.collection('User').doc(id).delete();
     })
 
     
 }
 /*
 // getting Data
-db.collection('Users').orderBy('Day').get().then((snapshot) => {
+db.collection('User').orderBy('Day').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderCafe(doc);
     });
-})*/
-
+})
+*/
 // saving Data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('Users').add({
+    db.collection('User').add({
         State: form.State.value,
         City: form.City.value,
         Day: form.Day.value,
@@ -68,7 +68,7 @@ form.addEventListener('submit', (e) => {
 })
 
 // Real time listener
-db.collection('Users').orderBy('Day').onSnapshot(snapshot => {
+db.collection('User').orderBy('Day').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         console.log(change.doc.data());

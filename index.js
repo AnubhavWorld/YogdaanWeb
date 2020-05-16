@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyAz-0oP7rRFgoKjftdLeo7llctC0yiw19M",
-    authDomain: "yogdaan-20e0a.firebaseapp.com",
-    databaseURL: "https://yogdaan-20e0a.firebaseio.com",
-    projectId: "yogdaan-20e0a",
-    storageBucket: "yogdaan-20e0a.appspot.com",
-    messagingSenderId: "989336896163",
-    appId: "1:989336896163:web:be3893270f567e06f0f516",
-    measurementId: "G-Y8BYPX3MHC"
+    apiKey: "AIzaSyBYBjuyi4QRtxsr7kIG2GcdAPcusfkS2bw",
+    authDomain: "yogdaan-63e49.firebaseapp.com",
+    databaseURL: "https://yogdaan-63e49.firebaseio.com",
+    projectId: "yogdaan-63e49",
+    storageBucket: "yogdaan-63e49.appspot.com",
+    messagingSenderId: "1053095630027",
+    appId: "1:1053095630027:web:e1f38a1e40a3ef56b5f74e",
+    measurementId: "G-LQK2Z9C6BN"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

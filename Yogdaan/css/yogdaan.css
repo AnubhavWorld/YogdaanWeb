@@ -41,6 +41,7 @@
     margin: 0.4rem;
     transition: all ease-in-out;
     border-radius: 50%;
+    margin-left: 2.5em;
 }
 #cross3{
     background-color: blue;
@@ -84,22 +85,12 @@ table{
 
 }
 td{
-    background: rgb(243, 240, 241);
+    background: rgb(52, 126, 126);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 th{
     color: gray;
-    background: honeydew;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
 }
-tr:hover{
-    color: green;
-}
-
-
-
-
-
-
